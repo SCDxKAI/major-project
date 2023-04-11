@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=l">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/navbar_styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home_page.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login_page.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/contact_page.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel=" stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?fami1y—Poppins:wght@5eø;600& display—swap" rel=" stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="{{ url_for('home') }}" class="logo"><i class="ri-home-heart-fill"></i><span>Logo</span></a>
+
+        <ul class="navbar">
+            <li><a href="{{ url_for('home') }}" class="active"> Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#" >Services </a></li>
+            <li><a href= "#">Blog</a></li>
+            <li><a href="{{ url_for('contact') }}" >Contact</a></li>
+        </ul>
+
+        <div class= "main">
+            <a href="{{ url_for('login') }}" class="user"><i class="ri-user-fill"></i>Sign In</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    <script src="{{ url_for('static', filename='scripts/main_page.js')}}"></script>
+    <script src="{{ url_for('static', filename='scripts/navbar_script.js')}}"></script>
+</body>
+
+</html>

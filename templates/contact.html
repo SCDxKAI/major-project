@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+  Login Page
+{% endblock %}
+
+{% block content %}
+	<section id="contact">
+		<!--socail----------->
+		<div class="social">
+			<!--icons--------->
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+
+		</div>
+		<!--contact-box------------->
+		<div class="contact-box">
+			<!--heading---------->
+			<div class="c-heading">
+				<h1>Get In Touch</h1>
+				<p>Email Us Regarding Question Or Issues</p>
+			</div>
+			<!--inputs------------------>
+			<div class="c-inputs">
+				<form>
+					<input type="text" placeholder="Full Name" />
+					<input type="email" placeholder="Example@gmail.com" />
+					<textarea name="message" placeholder="Write Message"></textarea>
+					<!--sumbit-btn----------->
+					<button>SEND</button>
+				</form>
+			</div>
+
+		</div>
+		<!--map------------------->
+		<div class="map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3712.6251370236623!2d83.88329834171262!3d21.483220493028718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a213c368309af57%3A0xdcd4d19c95624841!2sSambalpur%20University%20Institute%20of%20Information%20Technology%20(SUIIT)%2C%20Burla!5e0!3m2!1sen!2sin!4v1671089879600!5m2!1sen!2sin"
+				width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+				tabindex="0"></iframe>
+		</div>
+	</section>
+{% endblock%}
